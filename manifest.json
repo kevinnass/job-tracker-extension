@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "JobTracker Scraper",
+  "version": "1.0",
+  "description": "Capture job offers and save them to your JobTracker dashboard.",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "storage",
+    "cookies"
+  ],
+  "host_permissions": [
+    "https://erhalnpgzttnhiilopcp.supabase.co/*",
+    "https://job-tracker-opal-ten.vercel.app/*",
+    "<all_urls>"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+}
